@@ -1,8 +1,8 @@
 # MyMarkdown-Vue3
-<br>
+
 ### はじめに
 本サイトは、書籍「Vue.jsとFirebaseで作るミニWebサービス」(ISBN978-4-8443-9861-5)を参考にし、以下の変更を加えながら学習用に再構築したものです。
-<br>
+
 ### 主な変更点
 - Vue2+webpack → Vue3+Vite
 - OptionsAPI → ConpositonAPI('script setup' syntax)

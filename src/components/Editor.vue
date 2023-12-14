@@ -21,7 +21,6 @@
   const displayTitle = (text: string | null) => text ? text.split('\n')[0] : undefined; /* correspond to Getters */
   
   const signOut = useSignOut;   /* UseSignOut is the composable's function using Firebase/Auth  */
-  
 </script>
 
 

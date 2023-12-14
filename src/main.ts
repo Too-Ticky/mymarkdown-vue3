@@ -2,16 +2,24 @@ import './assets/css/github-markdown.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+// import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { createPersistedState } from 'pinia-plugin-persistedstate'
+
 
 import App from './App.vue'
 import router from './router/index.js'
-// import { firebaseApp } from './composables/firebaseConfig.js'
-import './composables/firebaseConfig' // Conposable for Firebase connection
+import './composables/firebaseConfig' /* Configration for Firebase connection */
 
-// firebaseApp()
 const app = createApp(App)
 
-app.use(createPinia())
+const pinia = createPinia()
+// pinia.use(piniaPluginPersistedstate)
+pinia.use(createPersistedState({  // To make persistence of Pinia stores
+  auto: true,
+  storage: sessionStorage,
+}))
+
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')
